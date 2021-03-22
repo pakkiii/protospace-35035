@@ -6,5 +6,5 @@ class Prototype < ApplicationRecord
   validates :catch_copy, presence: true
   validates :concept, presence: true
   belongs_to :user
-  has_many :comments
+  has_many :comments, dependent: :destroy
 end
